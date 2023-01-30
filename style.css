@@ -135,7 +135,7 @@ span {
     background: url(images/topHeaderBg.png);
     background-size: cover;
     background-position-y: 10%;
-    padding: 0rem 1rem;
+    padding: 0.75rem 1rem;
     transition: 2s ease;
   }
 
@@ -176,6 +176,7 @@ span {
   .strickyHeader{
     position: fixed;
     z-index: 500;
+    padding: 0;
     top: 0;
     left: 0;
     background-color: #fff;
@@ -202,6 +203,10 @@ span {
 
     .mainWrapper{
       top: 5.6rem;
+    }
+
+    #navTwo{
+      background: none;
     }
   }
 
@@ -604,7 +609,7 @@ span {
   position: relative;
 }
 
-#designImg div {
+#designImgHover{
   display: none;
   position: absolute;
   width: 280px;
@@ -1181,7 +1186,7 @@ span {
     }
 
     .links {
-      margin-inline: 2rem;
+      margin-inline: 1rem;
       padding-inline: 0;
       margin-block: 1.5rem;
       border-inline: none;
@@ -1640,3 +1645,197 @@ span {
       padding: 0;
     }
   }
+
+  /* Services Page */
+    .servicesMain{
+      padding: 2rem 4rem;
+    }
+
+    .servicesMain .serviceInner{
+      flex-direction: row-reverse;
+    }
+
+    .servicesMain .serviceLeft{
+      padding-inline-start: 2rem;
+    }
+
+    .servicesMain .serviceLeft h1{
+      font-size: 4.5rem;
+      margin-bottom: 0;
+    }
+
+    .servicesMain .serviceLeft h4{
+      position: relative;
+      margin-top: 1.5rem;
+    }
+
+    .servicesMain .serviceLeft span{
+      font-size: 5rem;
+      display: block;
+      position: absolute;
+      top: -2rem;
+      right: 21rem;
+    }
+
+    .servicesMain .serviceLeft ul{
+      padding: 2rem;
+    }
+
+    .descriptTag{
+      position: absolute;
+      background-color: #f4931e;
+      bottom: -12.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: max-content;
+    }
+
+    .descriptTag h4{
+      padding: 1rem 6rem;
+      font-size: 1.2rem;
+    }
+
+    .serviceBottom{
+      margin-top: 5rem;
+    }
+
+    .serviceBottom p{
+      font-size: 1.05rem;
+    }
+
+    /* Responsive */
+  @media only screen and (max-width: 991px){
+      .aboutBannerRight{
+        right: 3rem;
+        top: 12.5%;
+      }
+
+      .aboutBannerRight h1{
+        font-size: 4.25rem;
+      }
+
+      .aboutBannerRight span{
+        font-size: 6rem;
+      }
+
+      .servicesMain .serviceLeft h1{
+        font-size: 4rem;
+        line-height: 0.9;
+      }
+
+      .servicesMain .serviceLeft span {
+        right: 0;
+      }
+
+      .servicesMain .serviceLeft ul{
+        padding-top: 1rem;
+      }
+        
+      .serviceBottom{
+        margin-top: 0;
+      }
+
+      .servicesBody .footer2-box{
+        margin: 0;
+      }
+
+      .servicesBody .footer-even-col-left img {
+        width: 45%;
+      }
+
+      .servicesBody .footer2last{
+        padding-left: 0.75rem;
+      }
+
+      .servicesBody .footer2Links{
+        padding: 0;
+      }
+
+      .servicesBody .footer-even-col-right{
+      border: none;
+      }
+
+      .descriptTag{
+        bottom: -20%;
+      }
+
+      .descriptTag h4{
+        padding: 1rem ;
+      }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .servicesBody .aboutBannerLeft img{
+      height: 30vh;
+    }
+
+    .servicesBody .aboutBannerRight h1{
+      font-size: 3rem;
+    }
+
+    .servicesBody .aboutBannerRight span{
+      font-size: 4.5rem;
+    }
+
+    .servicesBody .aboutBannerRight{
+      top: 21%;
+    }
+
+    .servicesMain .serviceInner{
+      flex-direction: column-reverse;
+    }
+
+    .servicesMain{
+      padding: 2rem;
+    }
+
+    .servicesMain .serviceLeft h1{
+      margin-top: 4rem;
+    }
+
+    .servicesBody .footer2Links{
+      padding-block: 1rem;
+    }
+
+
+    /* .descriptTag{
+      bottom: -15%;
+      padding: 1rem 4rem;
+    }
+
+    .descriptTag h4{
+      font-size: 2rem;
+    } */
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .servicesMain .serviceLeft span{
+      right: 52.5%;
+    }
+  }
+
+  @media only screen and (min-width: 1512px) {
+    .servicesMain .serviceLeft span{
+      right: 55%;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .servicesMain .serviceLeft span{
+      right: 60%;
+    }
+  }
+
+  @media only screen and (min-width:1760px) {
+    .servicesMain .serviceLeft span{
+      right: 62.5%;
+    }
+  }
+
+  @media only screen and (min-width: 1850px) {
+    .servicesMain .serviceLeft span{
+      right: 65%;
+    }
+  }
+  /* Services Page Ends */
