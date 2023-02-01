@@ -78,3 +78,54 @@ window.addEventListener("scroll", function(){
   headerTop.classList.toggle("htAnimate", window.scrollY > 5);
   nav.classList.toggle("stricky-fixed", window.scrollY > 5)
 })
+
+$(document).ready(function () {
+  $(".ianimator").waypoint(
+    function () {
+      $(".ianimator").addClass("animated fadeIn");
+    },
+    {
+      offset: "90%",
+    }
+  ),
+    $(".animatortwo").waypoint(
+      function () {
+        $(".animatortwo").addClass("animated fadeIn");
+      },
+      {
+        offset: "90%",
+      }
+    ),
+    $(".animatorthree").waypoint(
+      function () {
+        $(".animatorthree").addClass("animated fadeIn");
+      },
+      {
+        offset: "90%",
+      }
+    ),
+    $(".animatorfour").waypoint(
+      function () {
+        $(".animatorfour").addClass("animated fadeIn");
+      },
+      {
+        offset: "90%",
+      }
+    ),
+    $(".animatorfive").waypoint(
+      function () {
+        $(".animatorfive").addClass("animated fadeIn");
+      },
+      {
+        offset: "60%",
+      }
+    ),
+    $(".animatorsix").waypoint(
+      function () {
+        $(".animatorsix").addClass("animated fadeIn");
+      },
+      {
+        offset: "90%",
+      }
+    );
+});
