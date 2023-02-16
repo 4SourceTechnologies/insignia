@@ -395,6 +395,8 @@
     }
 
     .aboutInner span {
+      display: block;
+      width: max-content;
       border-bottom: 1px solid black;
       line-height: 1;
     }
@@ -966,6 +968,16 @@
     .testimonials2,
     .blogs2 {
       padding-top: 2rem;
+    }
+
+    .blogsRow .btn2{
+      width: 15%;
+      margin-inline: auto;
+    }
+
+    .blogsRow button a{
+      color: inherit;
+      text-decoration: none;
     }
 
     @media (max-width:767px) {
