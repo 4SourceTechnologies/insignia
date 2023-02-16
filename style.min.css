@@ -971,13 +971,13 @@
     }
 
     .blogsRow .btn2{
-      width: 15%!important;
-      margin-inline: auto!important;
+      width: 15%;
+      margin-inline: auto;
     }
 
     .blogsRow button a{
-      color: inherit!important;
-      text-decoration: none!important;
+      color: inherit;
+      text-decoration: none;
     }
 
     @media (max-width:767px) {
