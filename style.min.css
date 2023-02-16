@@ -72,6 +72,11 @@
     font-size: 1.2rem;
   }
 
+  @media only screen and (max-width: 767px) {
+    h1 span{
+      font-size: 4.5rem;
+    }
+  }
   
 
 /* Typography Ends */
