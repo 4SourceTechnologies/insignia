@@ -34,6 +34,12 @@
     src: url(fonts/porticoOutline.otf);
   }
 
+  h1 span {
+    font-family: "RosellindaAlyamore";
+    font-size: 6.5rem;
+    color: #f4931e;
+  }
+
   h1 {
     font-family: "oswald", sans-serif;
     font-weight: 400;
@@ -60,11 +66,7 @@
     font-size: 1.2rem;
   }
 
-  span {
-    font-family: "RosellindaAlyamore";
-    font-size: 6.5rem;
-    color: #f4931e;
-  }
+  
 
 /* Typography Ends */
 
