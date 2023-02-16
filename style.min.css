@@ -328,6 +328,13 @@
     .drm{
       left: 17.5rem;
     }
+
+    .bannerCarouselControlNext{
+      left: 48.5%;
+    }
+    .bannerCarouselControlPrev{
+      left: 46.5%;
+    }
   }
   @media (min-width:1900px) {
     .drm{
@@ -337,6 +344,9 @@
     .headerTop, #navTwo{
       padding-inline: 3rem;
     }
+  }
+  
+    
   }
 /* Banner Section Ends */
 
@@ -499,6 +509,25 @@
 
       .bannerCarouselControlPrev{
         left: 40.75%;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      .bannerCarouselControlNext {
+        left: 49%;
+      }
+
+      .bannerCarouselControlPrev{
+        left: 46.75%;
+      }
+    }
+
+    @media only screen and (min-width: 1920px) {
+      .bannerCarouselControlNext{
+        left: 54.5%;
+      }
+      .bannerCarouselControlPrev{
+        left: 52.5%;
       }
     }
 /* carousel Controls */
