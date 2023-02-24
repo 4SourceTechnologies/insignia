@@ -601,6 +601,10 @@
       padding-left: 2rem;
       padding-right: 10rem;
     }
+    #designImgHover a{
+      color: inherit;
+      text-decoration: none;
+    }
 
     .serviceLeft ul>li {
       padding-left: 1em;
@@ -3128,7 +3132,7 @@
   
     }
 
-    /* Blog Inner */
+  /* Blog Inner */
     .blogInnerMain{
       display: flex;
       padding: 4rem;
@@ -3191,3 +3195,153 @@
             column-gap: 1rem;
         }
     }
+  /* Blog Inner */
+
+  /* Service Inner */
+  .siMain .testiTop{
+    text-align: center;
+    padding-inline: 5rem;
+  }
+  .siCarousel .row{
+    gap: 1rem 0;
+    padding: 2rem 4rem;
+  }
+  .siCarousel{
+    margin-bottom: 5%;
+  }
+
+  .siCarousel img{
+    max-width: 100%;
+  }
+
+  .siPrev, .siNext{
+    top: inherit;
+    bottom: -5%;
+  }
+
+  .siPrev{
+    right: 3rem;
+    left: inherit;
+  }
+  .siNext{
+    right: 1rem;
+  }
+  .si .carousel-control-next-icon{
+    background-color: #cfd0d1;
+  }
+  .imgClickWrapper{
+    visibility:hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    
+  }
+  .imgClickWrapper.clicked{
+    visibility: visible;
+  }
+  .imgClickInner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    user-select: none;
+  }
+  .imgClickWrapper .header, .modal-header{
+    display: flex;
+    justify-content: end;
+    column-gap: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.15rem 2rem 0.2rem 2rem;
+    transition: 0.25s ease ;
+    border: none;
+  }
+  .imgClickInner img{
+    transition: 0.2s ease all;
+  }
+  .imgClickInner .body, .modal-body{
+    cursor: grab;
+    height: 100%;
+    margin-inline: auto;
+    position: relative;
+    /* overflow: hidden; */
+    z-index: 1;
+  }
+  .modal-content{
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .modal-body img{
+    scale: 1;
+  }
+  img.zoomClicked{
+    transform: scale(1.25);
+    transition: 0.1s ease;
+    cursor: zoom-in;
+  }
+  .header>div{
+    cursor: pointer;
+  }
+  .zoomBtn .plusIcon{
+    display: flex;
+    align-items: center;
+  }
+  .zoomBtn{
+    display: flex;
+  }
+  .zoomBtn .minusIcon{
+    display: none;
+  }
+  .zoomBtn.ck .plusIcon{
+    display: none;
+  }
+  .zoomBtn.ck .minusIcon{
+    display: flex;
+    align-items: center;
+  }
+
+  .shareDiv{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    display: none;
+  }
+  .shareDiv ul{
+    list-style: none;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .shareDiv.sharing{
+    display: block;
+  }
+  .imgEnlarge{
+    transform: scale(1.45);
+  }
+  
+  .imgClickInner .header.headerAdj{
+    position: relative;
+    transform: translate(10%, -100%);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .siCarousel .col-lg-4{
+      width: 32.25%
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .siMain .testiTop{
+      padding-inline: 2rem;
+    }
+
+    .siCarousel .row{
+      padding: 2rem;
+    }
+  }
+  /* Service Inner */
