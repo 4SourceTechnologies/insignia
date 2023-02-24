@@ -57,7 +57,7 @@ humburger.addEventListener("blur", function () {
 });
 // Mobile nav number function ends here
 
-// Navbar Two postion:fixed upon Scroll 
+// Navbar Two postion:fixed upon Scroll
 // $(document).ready(function () {
 //   $(window).scroll(function () {
 //     var scroll = $(window).scrollTop();
@@ -72,12 +72,12 @@ humburger.addEventListener("blur", function () {
 //   });
 // });
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
   var headerTop = document.querySelector(".headerTop");
   var nav = this.document.querySelector(".strickyHeader");
-  headerTop.classList.toggle("htAnimate", window.scrollY > 5);
-  nav.classList.toggle("stricky-fixed", window.scrollY > 5)
-})
+  headerTop.classList.toggle("htAnimate", window.scrollY > 0);
+  nav.classList.toggle("stricky-fixed", window.scrollY > 1);
+});
 
 $(document).ready(function () {
   $(".ianimator").waypoint(
@@ -128,4 +128,44 @@ $(document).ready(function () {
         offset: "90%",
       }
     );
+});
+
+$(".readMore").click(function () {
+  $(".readMoreOverlay").addClass("showUp");
+  $(".readMore").toggle();
+});
+
+$(".readLess").click(function () {
+  $(".readMoreOverlay").removeClass("showUp");
+  $(".readMore").toggle();
+});
+
+
+$('.siMain img').click(function(){
+ var imgSrc = ($(this)).attr('src');
+ $(".clickedImg").attr("src", imgSrc);
+ $('.imgClickWrapper').addClass('clicked');
+ this.attr('data-enlargeable').addClass('img-enlargeable')
+});
+
+$('.zoomBtn').click(function(){
+  $('.imgClickInner .body img').toggleClass('zoomClicked');
+  $('.imgClickInner .header').addClass('.headerAdj');
+   $(this).toggleClass("ck");
+})
+
+$('.shareBtn').click(function(){
+  $('.shareDiv').toggleClass('sharing');
+})
+
+$('.expandBtn').click(function(){
+  $('.imgClickWrapper').removeClass('clicked')
+})
+
+$(".closeBtn").click(function () {
+  $(".imgClickWrapper").removeClass("clicked");
+  $(".imgClickInner .body img").removeClass("zoomClicked");
+  $(".imgClickInner .header").removeClass(".headerAdj");
+  $(".zoomBtn").removeClass("ck");
+  $(".shareDiv").removeClass("sharing");
 });
