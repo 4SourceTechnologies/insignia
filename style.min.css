@@ -3238,10 +3238,14 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
-    
+    overflow: hidden;
   }
   .imgClickWrapper.clicked{
     visibility: visible;
+  }
+  .imgClickWrapper.fScreen{
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
   }
   .imgClickInner{
     position: absolute;
@@ -3250,6 +3254,21 @@
     transform: translate(-50%, -50%);
     z-index: 10000;
     user-select: none;
+    overflow: hidden;
+  }
+  .expandBtn  button{
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+  .expandBtn .fa-compress{
+    display: none;
+  }
+  .expandBtn.clicked .fa-compress{
+    display: block;
+  }
+  .expandBtn.clicked .fa-expand{
+    display: none;
   }
   .imgClickWrapper .header, .modal-header{
     display: flex;
@@ -3332,16 +3351,6 @@
   @media screen and (min-width: 1024px) {
     .siCarousel .col-lg-4{
       width: 32.25%
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .siMain .testiTop{
-      padding-inline: 2rem;
-    }
-
-    .siCarousel .row{
-      padding: 2rem;
     }
   }
   /* Service Inner */

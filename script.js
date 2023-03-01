@@ -140,7 +140,6 @@ $(".readLess").click(function () {
   $(".readMore").toggle();
 });
 
-
 $('.siMain img').click(function(){
  var imgSrc = ($(this)).attr('src');
  $(".clickedImg").attr("src", imgSrc);
@@ -158,8 +157,19 @@ $('.shareBtn').click(function(){
   $('.shareDiv').toggleClass('sharing');
 })
 
+var myDocument = document.documentElement
 $('.expandBtn').click(function(){
-  $('.imgClickWrapper').removeClass('clicked')
+  if(myDocument.requestFullscreen){
+    myDocument.requestFullscreen();
+  }
+
+$('.expandBtn').toggleClass('clicked');
+$('.imgClickWrapper').toggleClass('fScreen');
+$(".expandBtn.clicked").click(function () {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+});
 })
 
 $(".closeBtn").click(function () {
@@ -168,4 +178,14 @@ $(".closeBtn").click(function () {
   $(".imgClickInner .header").removeClass(".headerAdj");
   $(".zoomBtn").removeClass("ck");
   $(".shareDiv").removeClass("sharing");
+
+  if (document.fullscreenElement)  {
+    if (document.exitFullscreen){
+      document.exitFullscreen();
+    }
+  }
 });
+
+if ($(window).height() !== screen.height) {
+    $('.imgClickWrapper').removeClass('fScreen');
+}
