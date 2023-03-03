@@ -530,11 +530,11 @@
     
     @media only screen and (max-width:1440px) {
       .bannerCarouselControlNext{
-        left: 44.15%;
+        left: 43.8%;
       }
 
       .bannerCarouselControlPrev{
-        left: 40.75%;
+        left: 41.2%;
       }
     }
 
@@ -651,8 +651,7 @@
       position: relative;
     }
 
-    #designImgHover, #designImgHoveri{
-      opacity: 0;
+    .dmh{
       position: absolute;
       width: 280px;
       height: 210px;
@@ -665,15 +664,24 @@
       padding-inline: 1rem;
       transition: 0.8s ease;
     }
-
-    #designImgHoveri{
-      opacity: 0.95;
+    .dmh.ting{
+      opacity: 0;
+      animation: lal 3s ease 0s ;
     }
 
-    #designImgHover.ting{
+    .dmh.op {
       opacity: 1;
     }
 
+    @keyframes lal {
+      0%{
+        opacity: 0;
+      }
+
+      100%{
+        opacity: 1;
+      }
+    }
 
     #designImg{
       transition: 0.7s ease;
@@ -737,7 +745,7 @@
 
 /* Projects section */
     #projectsTabs .nav-link {
-      border: none!important;
+      border: none;
       background: transparent;
       padding-block: 1rem;
     }
@@ -776,8 +784,7 @@
     }
 
     .ourProjects .nav-link:hover {
-      color: grey;
-      border-color: #f4931e;
+      border: 1px solid #f4931e;
     }
 
     @media (max-width:767px) {

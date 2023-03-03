@@ -140,10 +140,11 @@ if ($(window).height() !== screen.height) {
     $('.imgClickWrapper').removeClass('fScreen');
 }
 
-var hImg = document.getElementById('designImgHover');
+var service = document.getElementById('services')
+var hImges = document.querySelectorAll('.dmh');
 
 const options = {
-  delay: "500",
+  delay: "2000",
   threshold: '0.9'
 }
 
@@ -151,7 +152,7 @@ const hObserver = new IntersectionObserver(function(
   entries, hObserver){
     entries.forEach(entry => {
       if (entry.isIntersecting){
-        hImg.classList.add("ting");
+        hImges.forEach((hImg)=> hImg.classList.add("ting"))
       }
       else {
         return;
@@ -159,5 +160,12 @@ const hObserver = new IntersectionObserver(function(
     })
   }, options);
 
-  hObserver.observe(hImg);
+  hObserver.observe(service);
 
+ 
+
+  function opaq(){
+    hImges.forEach((hImg)=> hImg.classList.add('op'));
+  }
+
+  setTimeout(opaq, 5000);
