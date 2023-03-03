@@ -76,8 +76,14 @@
     h1 span{
       font-size: 4.5rem;
     }
+   
   }
   
+  @media only screen and (max-width: 991px) {
+    h1 span{
+      font-size: 5.5rem;
+    }
+  }
 
 /* Typography Ends */
 
@@ -198,6 +204,7 @@
     }
     #navTwo{
       background: none;
+      padding-block:0;  
     }
     .strickyHeader.stricky-fixed{
       display: none;
@@ -292,6 +299,9 @@
     .drm {
       font-size: 7rem;
       position: static;
+    }
+    .carouselText{
+      padding: 0;
     }
   }
 
@@ -496,6 +506,12 @@
       }
     }
 
+    @media only screen and (max-width: 991px) {
+      .testimonialCarouselControlNext{
+        right: 40.48%;
+      }
+    }
+
     @media only screen and (min-width: 1024px) and (max-width: 1440px) {
       .carouselImg{
         flex: 1 0 50%;
@@ -514,7 +530,7 @@
     
     @media only screen and (max-width:1440px) {
       .bannerCarouselControlNext{
-        left: 43.15%;
+        left: 44.15%;
       }
 
       .bannerCarouselControlPrev{
@@ -635,13 +651,12 @@
       position: relative;
     }
 
-    #designImgHover{
-      display: none;
+    #designImgHover, #designImgHoveri{
+      opacity: 0;
       position: absolute;
       width: 280px;
       height: 210px;
       background-color: #fff;
-      opacity: 0.95;
       z-index: 2;
       top: 10%;
       text-align: center;
@@ -650,6 +665,15 @@
       padding-inline: 1rem;
       transition: 0.8s ease;
     }
+
+    #designImgHoveri{
+      opacity: 0.95;
+    }
+
+    #designImgHover.ting{
+      opacity: 1;
+    }
+
 
     #designImg{
       transition: 0.7s ease;
@@ -669,10 +693,11 @@
       color: inherit;
     }
 
-    .serviceLeft .nav-tabs .nav-link:active {
+    .serviceLeft .nav-tabs .nav-link.active {
       border: none;
       color: #f4931e;
     }
+
 
     @media (max-width:767px) {
       .services2 {
@@ -686,7 +711,27 @@
       .serviceLeft ul {
         padding-right: 1rem;
       }
+
+      #designImgHover, 
+      #designImgHoveri{
+        width: 180px;
+        height: 160px;
+      }
+
+      #designImg .btn2{
+        margin: 0;
+      }
     }
+
+    @media screen and (min-width:768px) and (max-width:991px){
+      #designImgHover,
+      #designImgHoveri {
+        width: 200px;
+        height: 140px;
+        left: 16%;
+      }
+    }
+    
 
 /* Services Section */
 
@@ -725,7 +770,7 @@
       background-color: #f4931e;
     }
 
-    .ourProjects .nav-link:active{
+    .ourProjects .nav-link.active{
       background-color: #f4931e!important;
       color: white;
     }
@@ -989,10 +1034,15 @@
       text-decoration: none;
     }
 
-    @media (max-width:767px) {
+    @media (max-width:991px) {
       .blogsRow{
         padding-inline: 1rem;
         row-gap: 1rem;
+      }
+
+      .blogsRow .btn2{
+        width: 35%;
+        margin: auto;
       }
     }
 /* Blog Section Ends */
